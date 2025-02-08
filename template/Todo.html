@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <form method="post">
+        <input type="text" name="item" required>
+        <button type="submit" name="add">Add</button>
+    </form>
+    <ul>
+        {% for idx, item in enumerate(todo_items, 1) %}
+            <li>{{ idx }}. {{ item }}</li>
+        {% endfor %}
+    </ul>
+    <form method="post">
+        <input type="number" name="index" required>
+        <button type="submit" name="remove">Remove</button>
+    </form>
+    <a href="{{https://infinitexlks.github.io/PyMultiApp/index.html/}}">Back to home</a>
+</body>
+</html>
